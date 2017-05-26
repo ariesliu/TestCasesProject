@@ -1,5 +1,5 @@
 # TestCasesProject
-A public project which includes all test cases for fireline.
+一个公开的项目，用来公示火线测试的用例.
 
 ## 测试用例类型
 
