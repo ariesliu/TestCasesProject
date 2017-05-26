@@ -1,0 +1,29 @@
+[INFO] Running command /usr/local/bin/infer -- ./gradlew build
+[INFO] Path to infer script /usr/local/bin/infer (/usr/local/Cellar/infer/0.8.1/libexec/infer/lib/python/infer)
+[INFO] Infer version v0.8.1
+Copyright 2009 - present Facebook. All Rights Reserved.
+
+
+[INFO] Platform: Darwin-15.5.0-x86_64-i386-64bit
+[INFO] PATH=/opt/local/bin:/opt/local/sbin:/usr/local/Cellar/python3/3.5.2/Frameworks/Python.framework/Versions/3.5/bin/python3.5/bin:/usr/local/rvm/bin:/usr/local/bin:/Users/liujun-iri/Library/Android/sdk:/Users/liujun-iri/Library/Android/sdk/tools:/Users/liujun-iri/Library/Android/sdk/emulator::/Users/liujun-iri/Library/Android/sdk/platform-tools:/Users/liujun-iri/tools/apache-ant-1.9.7/bin:/Users/liujun-iri/tools/apache-maven-3.3.9/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin:/Users/liujun-iri/Downloads/gradle-3.3/bin:/opt/local/sbin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/sbin:/usr/local/bin:/usr/local/rvm/bin:/usr/local/bin/python3
+[INFO] SHELL=/bin/bash
+[INFO] PWD=/Users/liujun-iri/Desktop/RuleTestProjects/androidRuleTestCases
+[INFO] output of locale.getdefaultlocale(): ('zh_CN', 'UTF-8')
+[INFO] encoding we chose in the end: UTF-8
+[INFO] Running with:
+
+------------------------------------------------------------
+Gradle 3.3
+------------------------------------------------------------
+
+Build time:   2017-01-03 15:31:04 UTC
+Revision:     075893a3d0798c0c1f322899b41ceca82e4e134b
+
+Groovy:       2.4.7
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Mac OS X 10.11.5 x86_64
+
+
+[INFO] Capture phase was successful
+[INFO] Starting analysis

@@ -1,0 +1,12 @@
+Found 2 issues
+
+app/src/main/java/com/qihoo/ruletestcases/CheckSqlRawqueryRuleTest.java:17: error: RESOURCE_LEAK
+   resource of type android.database.sqlite.SQLiteCursor acquired by call to rawQuery(...) at line 17 is not released after line 17
+
+app/src/main/java/com/qihoo/ruletestcases/NullPointerTest.java:18: error: NULL_DEREFERENCE
+  object list last assigned on line 17 could be null and is dereferenced at line 18
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 1
+     RESOURCE_LEAK: 1

@@ -1,0 +1,1 @@
+/Users/liujun-iri/Desktop/RuleTestProjects/androidRuleTestCases/app/src/test/java/com/qihoo/ruletestcases/ExampleUnitTest.java
