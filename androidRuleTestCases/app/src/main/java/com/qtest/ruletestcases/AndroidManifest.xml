@@ -1,0 +1,108 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.qtest.ruletestcases">
+
+	<!-- To store the heap dumps and leak analysis results. -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!--AllowBackupRule 规则测试 allowBackup="false" 默认值为true -->
+	<!--DebuggableRule 规则测试   debuggable="false" 默认值为true-->
+	<application 
+		android:debuggable="true"
+		android:allowBackup="true"
+		>
+		<!-- FragmentRule规则测试，exported为true -->
+		<activity android:name="FragmentRuleTest"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		
+		<!--  DDosBlockRuleTest规则测试，exported为true，未做权限限制-->
+		<activity android:name="DDosBlockRuleTest"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		
+		<!-- CheckIntentParseUriRuleTest 规则测试，exported为true，未做权限限制 -->
+		<activity android:name="CheckIntentParseUriRuleTest"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		
+		<!-- ActivityExportedOverMuchRule规则测试 -->
+		<activity android:name="DisplayLeakActivity2"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+
+		<activity android:name="DisplayLeakActivity3"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+
+		<activity android:name="DisplayLeakActivity4"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label" >
+		</activity>
+
+		<activity android:name="DisplayLeakActivity5"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+
+		<activity android:name="DisplayLeakActivity6"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		<activity android:name="DisplayLeakActivity7"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		<activity android:name="DisplayLeakActivity8"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+		<activity android:name="DisplayLeakActivity9"
+			android:exported="true" android:enabled="false" android:icon="icon"
+			android:label="label">
+		</activity>
+
+		<!-- broadcastReceiverExportedTrueRule 测试用例 -->
+		<!-- android:exported="true" -->
+		<receiver android:directBootAware="true" android:name="BroadcastReceiverTest"
+			android:exported="true" android:enabled="true" android:icon="drawable resource"
+			android:label="string resource" android:permission="string">
+
+			<intent-filter
+				android:label="string resource" android:priority="1">
+				<action android:name="string" />
+			</intent-filter>
+		</receiver>
+
+		<!-- android:permissionGroup="BroadcastReceiver" -->
+		<permission android:name="BroadcastReceiverNo"
+			android:description="string resource" android:icon="drawable resource"
+			android:label="string resource" android:protectionLevel="normal" />
+
+		<!-- ProtectionLevelRule规则测试用例 -->
+		<permission 
+			android:name="string" 
+			android:protectionLevel="normal" 
+			android:icon="drawable resource" 
+			android:description="string resource"
+			android:label="string resource"
+			android:permissionGroup="string"
+			>
+		</permission>
+
+		<!-- CheckOverrideOpenFile规则测试，provider为导出且未做权限限制 -->
+		<provider android:name=".CheckOverrideOpenFileTest"
+			android:exported="true" android:permission="null"
+			android:directBootAware="true" android:enabled="true" android:icon="drawable resource"
+			android:initOrder="1" android:label="string resource">
+			<!-- android:targetSdkVersion="10" android:minSdkVersion="6" -->
+		</provider>
+
+	</application>
+
+	<!-- 复现bugjava.lang.NumberFormatException 原因：OverrideOpenFileRule中调用的ExportedTrueHandler.getProviderList()中SdkVersion的赋值逻辑有问题。 -->
+	<uses-sdk android:targetSdkVersion="aa" />
+</manifest>
